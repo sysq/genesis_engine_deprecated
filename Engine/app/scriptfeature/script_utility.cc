@@ -196,7 +196,7 @@ namespace App
 	{
 #ifdef __WIN32__
 		// - dynamic load mono dll
-		char16_t path[512] = {0};
+		char16_tt path[512] = {0};
 		Util::StringConvert::UTF8ToWide(monoDllPath.AsCharPtr(), path, 512);
 		HMODULE hMonoModule = LoadLibraryW( (wchar_t*)path );
 		if (!hMonoModule)
