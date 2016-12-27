@@ -1,0 +1,2 @@
+Compiling 'file:///C:/genesis_code/genesis_engine/Engine/app/appframework/appframeworkprotocol.nidl'
+Compiling 'file:///C:/genesis_code/genesis_engine/Engine/app/graphicfeature/graphicsfeatureprotocol.nidl'
