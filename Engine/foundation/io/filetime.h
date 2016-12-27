@@ -32,7 +32,7 @@ THE SOFTWARE.
     Defines a file-access timestamp.
 */
 #include "core/config.h"
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "io/win360/win360filetime.h"
 namespace IO
 {

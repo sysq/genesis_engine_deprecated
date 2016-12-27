@@ -38,7 +38,7 @@ THE SOFTWARE.
 
 // platform secific stuff for handling/suppress "unused-argument"-warnings
 #if NEBULA3_DEBUG
-#if (__XBOX360__ || __WIN32__)
+#if (__WIN64__ || __WIN32__)
 #pragma warning( push )
 // warnung unused param
 #pragma warning(disable: 4189)
@@ -383,7 +383,7 @@ GPtr<TYPE>::swap(GPtr<TYPE>& other)
 
 //------------------------------------------------------------------------------
 
-#if (__XBOX360__ || __WIN32__) && NEBULA3_DEBUG
+#if (__WIN64__ || __WIN32__) && NEBULA3_DEBUG
 #pragma warning( pop )
 #endif
 #ifdef NEBULA3_UNUSED_ATTR

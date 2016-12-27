@@ -20,7 +20,7 @@ namespace Jobs
 {
 typedef SerialJobFuncDesc JobFuncDesc;
 }
-#elif (__WIN32__ || __XBOX360__ || __ANDROID__ || __OSX__)
+#elif (__WIN32__ || __WIN64__ || __ANDROID__ || __OSX__)
 #include "jobs/tp/tpjobfuncdesc.h"
 namespace Jobs
 {

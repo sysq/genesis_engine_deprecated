@@ -29,7 +29,7 @@ namespace Input
 {
 __ImplementClass(Input::InputMouse, 'MOUS', Win32Input::Win32InputMouse);
 }
-#elif __XBOX360__
+#elif __WIN64__
 namespace Input
 {
 __ImplementClass(Input::InputMouse, 'MOUS', Xbox360::Xbox360Mouse);

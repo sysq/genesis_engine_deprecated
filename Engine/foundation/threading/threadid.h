@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "threading/win360/win360threadid.h"
 #elif __WII__
 #include "threading/wii/wiithreadid.h"

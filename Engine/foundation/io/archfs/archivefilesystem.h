@@ -31,7 +31,7 @@ THE SOFTWARE.
     Top-level platform wrapper class of archive file systems. 
     
 */
-#if __WIN32__ || __XBOX360__
+#if __WIN32__ || __WIN64__
 #include "io/zipfs/zipfilesystem.h"
 namespace IO
 {

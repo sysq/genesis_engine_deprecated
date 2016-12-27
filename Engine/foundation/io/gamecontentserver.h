@@ -33,7 +33,7 @@ THE SOFTWARE.
     before the first IoServer is created.
 */
 #include "core/config.h"
-#if (__WIN32__ || __XBOX360__ || __WII__ || __OSX__ || __ANDROID__)
+#if (__WIN32__ || __WIN64__ || __WII__ || __OSX__ || __ANDROID__)
 #include "io/base/gamecontentserverbase.h"
 namespace IO
 {

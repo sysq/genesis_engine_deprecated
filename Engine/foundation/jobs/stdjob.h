@@ -12,7 +12,7 @@
 #if __WIN32__
 #include "core/win32/precompiled.h"
 #include "jobs/jobfunccontext.h"
-#elif __XBOX360__
+#elif __WIN64__
 #include "core/xbox360/precompiled.h"
 #include "jobs/jobfunccontext.h"
 #elif __WII__

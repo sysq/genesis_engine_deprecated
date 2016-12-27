@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 namespace Net
 {
-#if (__WIN32__ || __XBOX360__ || __PS3__ || __ANDROID__ || __OSX__)
+#if (__WIN32__ || __WIN64__ || __PS3__ || __ANDROID__ || __OSX__)
 __ImplementClass(Net::TcpServer, 'TCPS', Net::StdTcpServer);
 #elif __WII__
 __ImplementClass(Net::TcpServer, 'TCPS', Wii::WiiTcpServer);

@@ -29,8 +29,8 @@ THE SOFTWARE.
 #include "stdneb.h"
 #include "net/socket/socket.h"
 
-#if __XBOX360__
-#include "net/xbox360/xbox360network.h"
+#if __WIN64__
+#include "net/socket/socket.h"
 #endif
 
 namespace Win360
@@ -73,11 +73,6 @@ void
 Win360Socket::InitNetwork()
 {
     n_assert(!NetworkInitialized);
-
-    // first setup the Xbox networking stuff
-    #if __XBOX360__
-    Xbox360::Xbox360Network::SetupNetwork();
-    #endif
 
     // now proceed as usual
     WSADATA wsaData;

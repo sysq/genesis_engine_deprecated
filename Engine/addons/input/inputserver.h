@@ -46,7 +46,7 @@ private:
 	
 };
 }
-#elif __XBOX360__
+#elif __WIN64__
 #include "input/xbox360/xbox360inputserver.h"
 namespace Input
 {

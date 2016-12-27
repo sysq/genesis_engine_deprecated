@@ -24,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "net/win360/win360socket.h"
 namespace Net
 {

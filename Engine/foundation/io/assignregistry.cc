@@ -176,7 +176,7 @@ AssignRegistry::IsValid() const
 //
 // //   #if __WIN32__
 // //       this->SetAssign(Assign("export", "root:export_win32"));
-// //   #elif __XBOX360__
+// //   #elif __WIN64__
 // //       this->SetAssign(Assign("export", "root:export_xbox360"));
 // //   #elif __WII__
 // //       this->SetAssign(Assign("export", "root:export_wii"));

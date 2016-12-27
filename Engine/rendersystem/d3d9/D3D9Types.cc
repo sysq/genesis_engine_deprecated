@@ -162,10 +162,6 @@ namespace D3D9
 		case PrimitiveTopology::LineStrip:      return D3DPT_LINESTRIP;
 		case PrimitiveTopology::TriangleList:   return D3DPT_TRIANGLELIST;
 		case PrimitiveTopology::TriangleStrip:  return D3DPT_TRIANGLESTRIP;
-#if __XBOX360__
-		case PrimitiveTopology::RectList:       return D3DPT_RECTLIST;
-		case PrimitiveTopology::QuadList:       return D3DPT_QUADLIST;
-#endif
 		default:
 			n_error("D3D9Types::AsDirect3DPrimitiveType(): unsupported topology '%s'!",
 				PrimitiveTopology::ToString(t).AsCharPtr());
@@ -227,7 +223,7 @@ namespace D3D9
 	D3DPOOL
 		D3D9Types::AsD3D9Pool(RenderResource::Usage usage, RenderResource::Access access)
 	{
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 		switch (usage)
 		{
 		case RenderResource::UsageImmutable:
@@ -245,25 +241,6 @@ namespace D3D9
 			n_error("D3D9Util::AsD3D9Pool(): invalid usage parameter!");
 			return D3DPOOL_SYSTEMMEM;
 		}
-#elif __XBOX360__
-		// the pool flag is ignored on the Xbox360, so just return "something"
-		switch (usage)
-		{
-		case UsageImmutable:
-			n_assert(AccessNone == access);
-			return D3DPOOL_SYSTEMMEM;
-
-		case UsageDynamic:
-			n_assert(AccessWrite == access);
-			return D3DPOOL_SYSTEMMEM;
-
-		case UsageCpu:
-			return D3DPOOL_SYSTEMMEM;
-
-		default:
-			n_error("D3D9Util::AsD3D9Pool(): invalid usage parameter!");
-			return D3DPOOL_SYSTEMMEM;
-		}
 #else
 #error "D3D9Util::AsD3D9Pool: Unsupported platform!"
 #endif
@@ -275,7 +252,7 @@ namespace D3D9
 	DWORD
 		D3D9Types::AsD3D9Usage(RenderResource::Usage usage, RenderResource::Access access)
 	{
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 		switch (usage)
 		{
 		case RenderResource::UsageImmutable:
@@ -292,25 +269,6 @@ namespace D3D9
 		default:
 			n_error("D3D9Util::AsD3D9Usage(): invalid usage parameter!");
 			return D3DPOOL_SYSTEMMEM;
-		}
-#elif __XBOX360__
-		// only CPU access is relevant on the 360
-		switch (usage)
-		{
-		case UsageImmutable:
-			n_assert(AccessNone == access);
-			return 0;
-
-		case UsageDynamic:
-			n_assert(AccessWrite == access);
-			return 0;
-
-		case UsageCpu:
-			return D3DUSAGE_CPU_CACHED_MEMORY;
-
-		default:
-			n_error("D3D9Util::AsD3D9Usage(): invalid usage parameter!");
-			return 0;
 		}
 #else
 #error "D3D9Util::AsD3D9Usage: Unsupported platform!"

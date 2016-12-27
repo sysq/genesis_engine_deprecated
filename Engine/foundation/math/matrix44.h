@@ -34,7 +34,7 @@ THE SOFTWARE.
 
     (C) 2006 Radon Labs GmbH
 */
-#if __WIN32__ || __XBOX360__ || __ANDROID__ || __OSX__
+#if __WIN32__ || __WIN64__ || __ANDROID__ || __OSX__
 #include "math/newMath/new_matrix44.h"
 #elif __WII__
 #include "math/wii/wii_matrix44.h"

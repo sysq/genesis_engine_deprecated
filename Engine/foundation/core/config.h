@@ -32,12 +32,6 @@ THE SOFTWARE.
 */
 
 // setup platform identification macros
-#ifdef __XBOX360__
-#undef __XBOX360__
-#endif
-#ifdef _XBOX
-#define __XBOX360__ (1)
-#endif
 
 #ifdef __WIN32__
 #undef __WIN32__
@@ -48,6 +42,7 @@ THE SOFTWARE.
 
 #ifdef _WIN64 
 #undef __WIN32__
+#define __WIN64__ (1)
 #endif
 
 #ifdef __PS3__

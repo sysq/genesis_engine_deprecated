@@ -177,7 +177,11 @@ SysFunc::Error(const char* error)
     /* Retry: call the debugger */
     if (nCode == IDRETRY)
     {
+#if __WIN64__
+		__debugbreak();
+#else
         __asm int 3;
+#endif
         /* return to user code */
         return;
     }

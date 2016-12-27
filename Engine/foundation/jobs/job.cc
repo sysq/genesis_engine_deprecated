@@ -11,7 +11,7 @@ namespace Jobs
 __ImplementClass(Jobs::Job, 'JOB_', PS3::PS3Job);
 #elif (NEBULA3_USE_SERIAL_JOBSYSTEM || __WII__)
 __ImplementClass(Jobs::Job, 'JOB_', Jobs::SerialJob);
-#elif (__WIN32__ || __XBOX360__ || __ANDROID__ || __OSX__)
+#elif (__WIN32__ || __WIN64__ || __ANDROID__ || __OSX__)
 __ImplementClass(Jobs::Job, 'JOB_', Jobs::TPJob);
 #else
 #error "Jobs::Job not implemented on this platform!"

@@ -32,7 +32,7 @@ THE SOFTWARE.
     to a new platform all that has to be done is to write a new 
     FSWrapper class.
 */
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "io/win360/win360fswrapper.h"
 namespace IO
 {

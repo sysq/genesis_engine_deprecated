@@ -31,7 +31,7 @@ THE SOFTWARE.
     Support for generating mini dumps. Mini dumps are automatically 
     created when n_assert() or n_error() triggers.
 */
-#if __WIN32__
+#if __WIN32__|| __WIN64__
 #include "debug/win32/win32minidump.h"
 namespace Debug
 {

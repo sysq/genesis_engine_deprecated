@@ -32,7 +32,7 @@ THE SOFTWARE.
     format the time to a human readable string
 */
 #include "core/config.h"
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "timing/win360/win360calendartime.h"
 namespace Timing
 {

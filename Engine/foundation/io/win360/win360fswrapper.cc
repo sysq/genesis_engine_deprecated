@@ -61,7 +61,7 @@ using namespace IO;
 Win360FSWrapper::Handle
 Win360FSWrapper::OpenFile(const String& path, Stream::AccessMode accessMode, Stream::AccessPattern accessPattern, DWORD flagsAndAttributes)
 {
-    #if __XBOX360__
+    #if __WIN64__
         String xbox360Path = path;
         xbox360Path.SubstituteChar('/', '\\');
     #else
@@ -105,7 +105,7 @@ Win360FSWrapper::OpenFile(const String& path, Stream::AccessMode accessMode, Str
     }
 
     // open/create the file
-    #if __XBOX360__
+    #if __WIN64__
         Handle handle = CreateFile(xbox360Path.AsCharPtr(), // lpFileName
                                    access,                  // dwDesiredAccess
                                    shareMode,               // dwShareMode
@@ -318,7 +318,7 @@ bool
 Win360FSWrapper::DeleteFile(const String& path)
 {
     n_assert(path.IsValid());
-    #if __XBOX360__
+    #if __WIN64__
         String nativePath = path;
         nativePath.SubstituteChar('/', '\\');
         return (0 != ::DeleteFileA(nativePath.AsCharPtr()));
@@ -337,7 +337,7 @@ bool
 Win360FSWrapper::DeleteDirectory(const String& path)
 {
     n_assert(path.IsValid());
-    #if __XBOX360__
+    #if __WIN64__
         String nativePath = path;
         nativePath.SubstituteChar('/', '\\');
         return (0 != ::RemoveDirectoryA(nativePath.AsCharPtr()));
@@ -356,7 +356,7 @@ bool
 Win360FSWrapper::FileExists(const String& path)
 {
     n_assert(path.IsValid());
-    #if __XBOX360__
+    #if __WIN64__
         String nativePath = path;
         nativePath.SubstituteChar('/', '\\');
         DWORD fileAttrs = GetFileAttributesA(nativePath.AsCharPtr());
@@ -383,7 +383,7 @@ bool
 Win360FSWrapper::DirectoryExists(const String& path)
 {
     n_assert(path.IsValid());
-    #if __XBOX360__
+    #if __WIN64__
         String nativePath = path;
         nativePath.SubstituteChar('/', '\\');
         DWORD fileAttrs = GetFileAttributesA(nativePath.AsCharPtr());
@@ -453,7 +453,7 @@ bool
 Win360FSWrapper::CreateDirectory(const String& path)
 {
     n_assert(path.IsValid());
-    #if __XBOX360__
+    #if __WIN64__
         String nativePath = path;
         nativePath.SubstituteChar('/', '\\');
         return (0 != ::CreateDirectoryA(nativePath.AsCharPtr(), NULL));
@@ -476,7 +476,7 @@ Win360FSWrapper::ListFiles(const String& dirPath, const String& pattern)
     n_assert(pattern.IsValid());
     
     String pathWithPattern = dirPath + "/" + pattern;
-    #if __XBOX360__
+    #if __WIN64__
         pathWithPattern.SubstituteChar('/', '\\');
     #else
         ushort widePath[1024];
@@ -485,7 +485,7 @@ Win360FSWrapper::ListFiles(const String& dirPath, const String& pattern)
     
     Array<String> result;
     HANDLE hFind;
-    #if __XBOX360__
+    #if __WIN64__
         WIN32_FIND_DATA findFileData;
         hFind = FindFirstFileA(pathWithPattern.AsCharPtr(), &findFileData);
         if (INVALID_HANDLE_VALUE != hFind) 
@@ -531,7 +531,7 @@ Win360FSWrapper::ListDirectories(const String& dirPath, const String& pattern)
     n_assert(pattern.IsValid());
     
     String pathWithPattern = dirPath + "/" + pattern;
-    #if __XBOX360__
+    #if __WIN64__
         pathWithPattern.SubstituteChar('/', '\\');
     #else
         ushort widePath[1024];
@@ -540,7 +540,7 @@ Win360FSWrapper::ListDirectories(const String& dirPath, const String& pattern)
 
     Array<String> result;
     HANDLE hFind;
-    #if __XBOX360__
+    #if __WIN64__
         WIN32_FIND_DATA findFileData;
         hFind = FindFirstFile(pathWithPattern.AsCharPtr(), &findFileData);
         if (INVALID_HANDLE_VALUE != hFind) 

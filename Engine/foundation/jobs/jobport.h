@@ -26,7 +26,7 @@ class JobPort : public SerialJobPort
     __DeclareClass(JobPort);
 };
 } // namespace Jobs
-#elif (__WIN32__ || __XBOX360__ || __ANDROID__ || __OSX__)
+#elif (__WIN32__ || __WIN64__ || __ANDROID__ || __OSX__)
 #include "jobs/tp/tpjobport.h"
 namespace Jobs
 {

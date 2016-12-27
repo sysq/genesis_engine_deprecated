@@ -30,7 +30,7 @@ THE SOFTWARE.
   
     Wrapper class for a platform-specific file archive.
 */    
-#if __WIN32__ || __XBOX360__
+#if __WIN32__ || __WIN64__
 #include "io/zipfs/ziparchive.h"
 namespace IO
 {

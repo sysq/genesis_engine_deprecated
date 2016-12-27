@@ -45,7 +45,7 @@ class Win360FSWrapper
 public:
     typedef HANDLE Handle;
 
-    #if __XBOX360__
+    #if __WIN64__
     static const uchar FileDelimiter = '\\';
     #endif
 

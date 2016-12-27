@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 namespace Threading
 {
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 __ImplementClass(Threading::Thread, 'TRED', Win360::Win360Thread);
 #elif __WII__
 __ImplementClass(Threading::Thread, 'TRED', Wii::WiiThread);

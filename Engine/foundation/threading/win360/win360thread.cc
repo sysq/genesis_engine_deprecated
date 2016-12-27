@@ -30,7 +30,7 @@ THE SOFTWARE.
 #include "system/systeminfo.h"
 #include "core/sysfunc.h"
 
-//#if __XBOX360__
+//#if __WIN64__
 //#include "threading/xbox360/xbox360threading.h"
 //#endif
 
@@ -117,24 +117,6 @@ Win360Thread::Start()
             SetThreadPriority(this->threadHandle, THREAD_PRIORITY_ABOVE_NORMAL);
             break;
     }
-    
-    #if __WIN32__
-        // select a good processor for the thread
-        /*
-        SystemInfo systemInfo;
-        SizeT numCpuCores = systemInfo.GetNumCpuCores();
-        DWORD threadIdealProc = 0;
-        if (Cpu::InvalidCoreId != this->coreId)
-        {
-            threadIdealProc = this->coreId % systemInfo.GetNumCpuCores();
-        }
-        SetThreadIdealProcessor(this->threadHandle, threadIdealProc);
-        */
-    #elif __XBOX360__
-        // on the 360 we need to define the hardware thread this thread should run on
-        n_assert(this->coreId != Cpu::InvalidCoreId)
-        Xbox360::Xbox360Threading::SetThreadProcessor(this->threadHandle, this->coreId);
-    #endif
 
     // resume thread (since it was actived in suspended state)
     ResumeThread(this->threadHandle);
@@ -281,7 +263,7 @@ Win360Thread::SetupMyThreadRunTime(const char* n)
     info.dwFlags    = 0;
     __try
     {
-        RaiseException( 0x406D1388, 0, sizeof(info) / sizeof(DWORD), (DWORD*)&info );
+        RaiseException( 0x406D1388, 0, sizeof(info) / sizeof(DWORD), (ULONG_PTR*)&info );
     }
     __except( EXCEPTION_CONTINUE_EXECUTION ) 
     {

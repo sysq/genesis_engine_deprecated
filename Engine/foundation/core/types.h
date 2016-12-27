@@ -143,7 +143,7 @@ inline unsigned long long    _byteswap_uint64(unsigned long long x)  { return ((
 #if __WIN32__
 #define n_stricmp stricmp
 #define n_snprintf StringCchPrintf
-#elif __XBOX360__
+#elif __WIN64__
 #define n_stricmp lstrcmpi
 #define n_snprintf StringCchPrintf
 #elif __WII__

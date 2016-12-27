@@ -33,7 +33,7 @@ class InputKeyboard : public Input::InputKeyboardBase
     __DeclareClass(InputKeyboard);
 };
 }
-#elif __XBOX360__
+#elif __WIN64__
 #include "input/xbox360/xbox360keyboard.h"
 namespace Input
 {

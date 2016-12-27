@@ -36,8 +36,8 @@ THE SOFTWARE.
 #include "memory/win360/win360memoryconfig.h"
 #if __WIN32__
 #include "memory/win32/win32memory.h"
-#elif __XBOX360__
-#include "memory/xbox360/xbox360memory.h"
+#elif __WIN64__
+#include "memory/win32/win32memory.h"
 #endif
 
 namespace Memory

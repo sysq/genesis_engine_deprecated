@@ -32,7 +32,7 @@ THE SOFTWARE.
 
     Nebula's quaternion class.
 */
-#if __WIN32__ || __XBOX360__ || __ANDROID__ || __OSX__
+#if __WIN32__ || __WIN64__ || __ANDROID__ || __OSX__
 #include "math/newMath/new_quaternion.h"
 #elif __WII__
 #include "math/wii/wii_quaternion.h"

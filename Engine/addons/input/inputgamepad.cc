@@ -23,7 +23,7 @@ THE SOFTWARE.
 ****************************************************************************/
 #include "input/input_stdneb.h"
 #include "input/inputgamepad.h"
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 namespace Input
 {
 __ImplementClass(Input::InputGamePad, 'GMPD', XInput::XInputGamePad);

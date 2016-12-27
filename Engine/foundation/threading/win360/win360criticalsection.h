@@ -27,7 +27,7 @@ THE SOFTWARE.
 #include "core/types.h"     
 #include "core/sysfunc.h"
 
-#if __XBOX360__
+#if __WIN64__
 // on xbox360 the critical section implementation seems to do the same as the windows user implementation
 #define NEBULA3_USER_CRITICAL_SECTION 0
 #else

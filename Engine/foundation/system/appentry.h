@@ -49,7 +49,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, LPSTR lpCmdLine,
     NebulaMain(args); \
     return 0; \
 }
-#elif __XBOX360__
+#elif __WIN64__
 #define ImplementNebulaApplication() \
 void NebulaMain(const Util::CommandLineArgs& args); \
 void __cdecl main() \

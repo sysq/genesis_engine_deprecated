@@ -25,7 +25,7 @@ THE SOFTWARE.
 #pragma once
 
 #include "core/config.h"
-#if (__XBOX360__ || __WIN32__)
+#if (__WIN64__ || __WIN32__)
 #include "memory/win360/win360memorypool.h"
 namespace Memory
 {

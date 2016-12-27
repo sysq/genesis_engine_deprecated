@@ -26,7 +26,9 @@ THE SOFTWARE.
 #ifdef __WIN32__
 #include "util/win32/win32stringconverter.h"
 #define utf8_to_wide Win32::Win32StringConverter::UTF8ToWide
-
+#elif __WIN64__
+#include "util/win32/win32stringconverter.h"
+#define utf8_to_wide Win32::Win32StringConverter::UTF8ToWide
 #elif __ANDROID__	
 #include "util/android/androidstringconverter.h"
 #define utf8_to_wide Android::AndroidStringConverter::UTF8ToWide
@@ -105,7 +107,7 @@ namespace Util
 		utf8_to_wide(src, dst, dstMaxBytes);
 #endif
 	}
-#ifdef WIN32
+#ifdef WIN32 || __WIN64__
 	void StringConvert::WideToUTF8(char16_tt* src, Util::String& out)
 	{
 		n_assert(0 != src);

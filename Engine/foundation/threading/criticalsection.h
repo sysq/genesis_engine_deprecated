@@ -25,7 +25,7 @@ THE SOFTWARE.
 ****************************************************************************/
 
 #include "core/config.h"
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "threading/win360/win360criticalsection.h"
 namespace Threading
 {

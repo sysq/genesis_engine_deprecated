@@ -28,7 +28,7 @@ namespace Input
 {
 __ImplementClass(Input::InputKeyboard, 'KBRD', Input::InputKeyboardBase);
 }
-#elif __XBOX360__
+#elif __WIN64__
 namespace Input
 {
 __ImplementClass(Input::InputKeyboard, 'KBRD', Xbox360::Xbox360Keyboard);

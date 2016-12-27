@@ -34,7 +34,7 @@ class InputMouse : public Win32Input::Win32InputMouse
     __DeclareClass(InputMouse);
 };
 }
-#elif __XBOX360__
+#elif __WIN64__
 #include "input/xbox360/xbox360mouse.h"
 namespace Input
 {

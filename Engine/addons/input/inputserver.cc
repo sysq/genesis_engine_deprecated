@@ -30,7 +30,7 @@ namespace Input
 #if __WIN32__
 __ImplementClass(Input::InputServer, 'INPS', Win32Input::Win32InputServer);
 __ImplementImageSingleton(Input::InputServer);
-#elif __XBOX360__
+#elif __WIN64__
 // FIXME!
 __ImplementClass(Input::InputServer, 'INPS', Xbox360::Xbox360InputServer);
 __ImplementImageSingleton(Input::InputServer);

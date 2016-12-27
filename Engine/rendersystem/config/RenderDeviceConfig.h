@@ -24,7 +24,7 @@ THE SOFTWARE.
 #ifndef RENDERDEVICECONFIG_H
 #define RENDERDEVICECONFIG_H
 
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 ////#include <dxerr9.h>
 #	ifndef DXTRACE_ERR
 #		define DXTRACE_ERR(x,y)
@@ -37,8 +37,8 @@ THE SOFTWARE.
 #	endif
 
 #	define RENDERDEVICE_NULL 0
-#	define RENDERDEVICE_D3D9 0
-#	define RENDERDEVICE_OPENGLES 1
+#	define RENDERDEVICE_D3D9 1
+#	define RENDERDEVICE_OPENGLES 0
 
 #elif __ANDROID__ || __OSX__
 #	define RENDERDEVICE_OPENGLES 1

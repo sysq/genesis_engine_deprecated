@@ -143,7 +143,7 @@ ThreadRunTimeInfo::DestoryThreadRunTime( bool isMainThread /*= false*/ )
 Threading::ThreadRunTimeInfo*
 ThreadRunTimeInfo::GetMyThreadRuntime(void)
 {
-#if __WIN32__ 
+#if __WIN32__ || __WIN64__
 	return (Threading::ThreadRunTimeInfo*)TlsGetValue(mTlsSlot);
 
 #elif __ANDROID__ || __OSX__

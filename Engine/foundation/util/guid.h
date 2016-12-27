@@ -31,11 +31,11 @@ namespace Util
 {
 typedef Win32::Win32Guid Guid;
 }
-#elif __XBOX360__
-#include "util/xbox360/xbox360guid.h"
+#elif __WIN64__
+#include "util/win32/win32guid.h"
 namespace Util
 {
-typedef Xbox360::Xbox360Guid Guid;
+typedef Win32::Win32Guid Guid;
 }
 #elif __WII__
 #include "util/wii/wiiguid.h"

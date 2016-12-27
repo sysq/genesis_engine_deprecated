@@ -43,7 +43,7 @@ THE SOFTWARE.
 
     (C) 2006 Radon Labs GmbH
 */
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "net/win360/win360ipaddress.h"
 namespace Net
 {

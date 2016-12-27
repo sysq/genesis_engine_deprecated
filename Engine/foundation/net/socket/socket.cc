@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 namespace Net
 {
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 __ImplementClass(Net::Socket, 'SOCK', Win360::Win360Socket);
 #elif __WII__
 // there is no class on Wii

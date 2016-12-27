@@ -25,7 +25,7 @@ THE SOFTWARE.
 #define __inputgamepad_H__
 
 
-#if (__WIN32__ || __XBOX360__)
+#if (__WIN32__ || __WIN64__)
 #include "input/xinput/xinputgamepad.h"
 namespace Input
 {

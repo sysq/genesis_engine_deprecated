@@ -33,7 +33,7 @@ THE SOFTWARE.
     A point in homogenous space. A point describes a position in space,
     and has its W component set to 1.0.
 */
-#if __WIN32__ || __XBOX360__ || __ANDROID__ || __OSX__
+#if __WIN32__ || __WIN64__ || __ANDROID__ || __OSX__
 #include "math/newMath/new_point.h"
 #elif __WII__
 #include "math/wii/wii_point.h"

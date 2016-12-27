@@ -34,8 +34,8 @@ THE SOFTWARE.
 #include "core/config.h"
 #if __WIN32__
 #include "core/win32/precompiled.h"
-#elif __XBOX360__
-#include "core/xbox360/precompiled.h"
+#elif __WIN64__
+#include "core/win32/precompiled.h"
 #elif __WII__
 #include "core/wii/precompiled.h"
 #elif __PS3__

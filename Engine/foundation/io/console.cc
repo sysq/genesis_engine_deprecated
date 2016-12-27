@@ -27,8 +27,8 @@ THE SOFTWARE.
 #include "threading/thread.h"
 #if __WIN32__
 #include "io/win32/win32consolehandler.h"
-#elif __XBOX360__
-#include "io/xbox360/xbox360consolehandler.h"
+#elif __WIN64__
+#include "io/win32/win32consolehandler.h"
 #elif __WII__
 #include "io/wii/wiiconsolehandler.h"
 #elif __PS3__
@@ -84,8 +84,8 @@ Console::Open()
     // create default console handlers
     #if __WIN32__
     GPtr<ConsoleHandler> consoleHandler = Win32::Win32ConsoleHandler::Create();
-    #elif __XBOX360__
-    GPtr<ConsoleHandler> consoleHandler = Xbox360::Xbox360ConsoleHandler::Create();
+    #elif __WIN64__
+    GPtr<ConsoleHandler> consoleHandler = Win32::Win32ConsoleHandler::Create();
     #elif __WII__
     GPtr<ConsoleHandler> consoleHandler = Wii::WiiConsoleHandler::Create();
     #elif __PS3__

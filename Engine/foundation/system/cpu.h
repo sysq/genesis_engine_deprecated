@@ -36,11 +36,11 @@ namespace System
 {
 typedef Win32::Win32Cpu Cpu;
 }
-#elif __XBOX360__
-#include "system/xbox360/xbox360cpu.h"
+#elif __WIN64__
+#include "system/win32/win32cpu.h"
 namespace System
 {
-typedef Xbox360::Xbox360Cpu Cpu;
+	typedef Win32::Win32Cpu Cpu;
 }
 #elif __WII__
 #include "system/wii/wiicpu.h"

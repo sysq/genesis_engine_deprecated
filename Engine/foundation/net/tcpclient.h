@@ -25,7 +25,7 @@ THE SOFTWARE.
 ****************************************************************************/
 
 #include "core/config.h"
-#if (__WIN32__ || __XBOX360__ || __PS3__ || __ANDROID__ || __OSX__)
+#if (__WIN32__ || __WIN64__ || __PS3__ || __ANDROID__ || __OSX__)
 #include "net/tcp/stdtcpclient.h"
 namespace Net
 {

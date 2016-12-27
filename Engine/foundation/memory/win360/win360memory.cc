@@ -56,17 +56,6 @@ Alloc(HeapType heapType, size_t size)
     Core::SysFunc::Setup();
 
     void* allocPtr = 0;
-    #if __XBOX360__
-    if (Xbox360GraphicsHeap == heapType)
-    {
-        allocPtr = Xbox360AllocPhysicalMemory(size, XALLOC_MEMPROTECT_WRITECOMBINE);
-    }
-    else if (Xbox360AudioHeap == heapType)
-    {
-        allocPtr = Xbox360AllocPhysicalMemory(size, 0);
-    }
-    else
-    #endif __XBOX360__
     {
 		n_assert(0 != Heaps[heapType]);
 		allocPtr =  __HeapAlloc16(Heaps[heapType], 0, size);
@@ -141,23 +130,6 @@ Free(HeapType heapType, void* ptr)
         #if NEBULA3_MEMORY_STATS
             SIZE_T size = 0;
         #endif    
-        #if __XBOX360__
-        if (Xbox360GraphicsHeap == heapType)
-        {
-            #if NEBULA3_MEMORY_STATS
-                size = Xbox360PhysicalMemorySize(ptr, XALLOC_MEMPROTECT_WRITECOMBINE);
-            #endif
-            Xbox360FreePhysicalMemory(ptr, XALLOC_MEMPROTECT_WRITECOMBINE);
-        }
-        else if (Xbox360AudioHeap == heapType)
-        {
-            #if NEBULA3_MEMORY_STATS
-                size = Xbox360PhysicalMemorySize(ptr, 0);
-            #endif
-            Xbox360FreePhysicalMemory(ptr, 0);
-        }
-        else
-        #endif // __XBOX360__
         {
             n_assert(0 != Heaps[heapType]);
             #if NEBULA3_MEMORY_STATS
@@ -337,7 +309,7 @@ Checkpoint(const char* msg)
     }
 
     // dump all Windows process heaps
-    #if !__XBOX360__
+    #if !__WIN64__
     n_printf("WIN32 PROCESS HEAPS\n");
     HANDLE procHeaps[100];
     DWORD procHeapIndex;

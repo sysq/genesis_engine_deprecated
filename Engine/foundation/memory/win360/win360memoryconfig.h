@@ -130,7 +130,7 @@ __HeapUnalignPointer16(unsigned char* ptr)
 __forceinline LPVOID 
 __HeapAlloc16(HANDLE hHeap, DWORD dwFlags, SIZE_T dwBytes)
 {
-    #if __XBOX360__
+    #if __WIN64__
     return ::HeapAlloc(hHeap, dwFlags, dwBytes);
     #else
     unsigned char* ptr = (unsigned char*) ::HeapAlloc(hHeap, dwFlags, dwBytes + 16);
@@ -149,7 +149,7 @@ __HeapAlloc16(HANDLE hHeap, DWORD dwFlags, SIZE_T dwBytes)
 __forceinline LPVOID
 __HeapReAlloc16(HANDLE hHeap, DWORD dwFlags, LPVOID lpMem, SIZE_T dwBytes)
 {
-    #if __XBOX360__
+    #if __WIN64__
     return HeapReAlloc(hHeap, dwFlags, lpMem, dwBytes);
     #else
     // restore unaligned pointer
@@ -189,7 +189,7 @@ __HeapReAlloc16(HANDLE hHeap, DWORD dwFlags, LPVOID lpMem, SIZE_T dwBytes)
 __forceinline BOOL
 __HeapFree16(HANDLE hHeap, DWORD dwFlags, LPVOID lpMem)
 {
-    #if __XBOX360__
+    #if __WIN64__
     return ::HeapFree(hHeap, dwFlags, lpMem);
     #else
     unsigned char* ptr = (unsigned char*) lpMem;
@@ -205,7 +205,7 @@ __HeapFree16(HANDLE hHeap, DWORD dwFlags, LPVOID lpMem)
 __forceinline SIZE_T
 __HeapSize16(HANDLE hHeap, DWORD dwFlags, LPCVOID lpMem)
 {
-    #if __XBOX360__
+    #if __WIN64__
     return ::HeapSize(hHeap, dwFlags, lpMem);
     #else
     unsigned char* ptr = (unsigned char*) lpMem;

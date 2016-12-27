@@ -35,11 +35,11 @@ namespace System
 {
 class SystemInfo : public Win32::Win32SystemInfo {};
 }
-#elif __XBOX360__
-#include "system/xbox360/xbox360systeminfo.h"
+#elif __WIN64__
+#include "system/win32/win32systeminfo.h"
 namespace System
 {
-class SystemInfo : public Xbox360::Xbox360SystemInfo {};
+class SystemInfo : public Win32::Win32SystemInfo {};
 }
 #elif __WII__
 #include "system/wii/wiisysteminfo.h"

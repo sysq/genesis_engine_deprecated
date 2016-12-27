@@ -38,7 +38,7 @@ public:
     virtual ~JobSystem();
 };
 } // namespace Jobs
-#elif (__WIN32__ || __XBOX360__ || __WII__ || __ANDROID__ || __OSX__)
+#elif (__WIN32__ || __WIN64__ || __WII__ || __ANDROID__ || __OSX__)
 #include "jobs/tp/tpjobsystem.h"
 namespace Jobs
 {

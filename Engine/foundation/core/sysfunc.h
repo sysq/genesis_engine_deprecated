@@ -39,15 +39,15 @@ class SysFunc : public Win32::SysFunc
     // empty
 };
 } // namespace Core
-#elif __XBOX360__
-#include "core/xbox360/xbox360sysfunc.h"
+#elif __WIN64__
+#include "core/win32/win32sysfunc.h"
 namespace Core
 {
-class SysFunc : public Xbox360::SysFunc
-{
-    // empty
-};
-}
+	class SysFunc : public Win32::SysFunc
+	{
+		// empty
+	};
+} // namespace Core
 #elif __WII__
 #include "core/wii/wiisysfunc.h"
 namespace Core

@@ -278,7 +278,7 @@ Win360IpAddress::GetHostByName(const Util::String& hostName, in_addr& outAddr)
             }
             outAddr = *inAddr;
             return true;
-        #else // __XBOX360__
+        #else // __WIN64__
             n_error("Win360IpAddress::GetHostByName(): self and inetself not implemented on Xbox360!");
             return false;
         #endif
@@ -301,7 +301,7 @@ Win360IpAddress::GetHostByName(const Util::String& hostName, in_addr& outAddr)
             }
             outAddr = *((in_addr*)he->h_addr);
             return true;
-        #else // __XBOX360__
+        #else // __WIN64__
             n_error("Win360IpAddress::GetHostByName(): DNS name lookups not supported on Xbox360!");
             return false;
         #endif

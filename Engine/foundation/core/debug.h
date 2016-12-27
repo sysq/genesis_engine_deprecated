@@ -129,7 +129,7 @@ namespace StaticAssert
 #	define n_verify(exp) (exp)
 #	define n_verify2(exp,imsg) (exp)
 #	define n_assert2(exp, msg) if(!(exp)){}
-#	if __WIN32__
+#	if __WIN32__ || __WIN64__
 #		define n_dxtrace(hr, msg)
 #	endif
 	//#define n_static_assert(exp)
@@ -139,12 +139,12 @@ namespace StaticAssert
 #		define n_assert(exp) assert(exp);
 #		define n_assert2(exp, msg) assert(exp);
 #	endif
-#	if __WIN32__
+#	if __WIN32__ || __WIN64__
 #		define n_assert(exp) { if (!(exp)) n_custom_assert(#exp,__FILE__,__LINE__); }
 #		define n_assert2(exp, msg) { if (!(exp)) n_custom_assert2(#exp,msg,__FILE__,__LINE__); }
 #	endif
 	//#define n_static_assert(exp) { int _x[ 2*((exp) != 0)-1 ]; (void)(_x[0]=0);}	
-#	if __WIN32__
+#	if __WIN32__ || __WIN64__
 	// dx9 specific: check HRESULT and display DX9 specific message box
 #		define n_dxtrace(hr, msg) { if (FAILED(hr)) DXTrace(__FILE__,__LINE__,hr,msg,true); }
 #	endif

@@ -28,7 +28,7 @@ THE SOFTWARE.
 
 namespace IO
 {
-#if __WIN32__ || __XBOX360__
+#if __WIN32__ || __WIN64__
 __ImplementClass(IO::Archive, 'ARCV', IO::ZipArchive);
 #elif __WII__
 __ImplementClass(IO::Archive, 'ARCV', Wii::WiiArchive);
