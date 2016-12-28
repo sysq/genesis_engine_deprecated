@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 #include "core/config.h"
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 #include "core/win32/precompiled.h"
 #elif __XBOX360__
 #include "core/xbox360/precompiled.h"

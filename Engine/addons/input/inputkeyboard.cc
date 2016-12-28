@@ -23,15 +23,10 @@ THE SOFTWARE.
 ****************************************************************************/
 #include "input/input_stdneb.h"
 #include "input/inputkeyboard.h"
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 namespace Input
 {
 __ImplementClass(Input::InputKeyboard, 'KBRD', Input::InputKeyboardBase);
-}
-#elif __WIN64__
-namespace Input
-{
-__ImplementClass(Input::InputKeyboard, 'KBRD', Xbox360::Xbox360Keyboard);
 }
 #elif __WII__
 namespace Input

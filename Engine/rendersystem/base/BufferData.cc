@@ -59,6 +59,8 @@ namespace RenderBase
 				{
 #if __OSX__
 					Memory::CopySmallOne((size_t*)buffer32, (size_t*)dest);
+#elif __WIN64__
+					Memory::CopySmallOne((size_t*)buffer32, (size_t*)dest);
 #else
 					Memory::CopySmallOne(buffer32, dest);
 #endif
@@ -73,6 +75,9 @@ namespace RenderBase
 				{
 #if __OSX__
 					Memory::CopySmallTwo((size_t*)buffer32, (size_t*)dest);
+
+#elif __WIN64__
+					Memory::CopySmallOne((size_t*)buffer32, (size_t*)dest);
 #else
 					Memory::CopySmallTwo(buffer32, dest);
 #endif
@@ -87,6 +92,8 @@ namespace RenderBase
 				while(vertexCount--)
 				{
 #if __OSX__
+					Memory::CopySmallThree((size_t*)buffer32, (size_t*)dest);
+#elif __WIN64__
 					Memory::CopySmallThree((size_t*)buffer32, (size_t*)dest);
 #else
 					Memory::CopySmallThree(buffer32, dest);
@@ -103,6 +110,8 @@ namespace RenderBase
 				{
 #if __OSX__
 					Memory::CopySmallFour((size_t*)buffer32, (size_t*)dest);
+#elif __WIN64__
+					Memory::CopySmallFour((size_t*)buffer32, (size_t*)dest);
 #else
 					Memory::CopySmallFour(buffer32, dest);
 #endif
@@ -116,6 +125,8 @@ namespace RenderBase
 				while(vertexCount--)
 				{
 #if __OSX__
+					Memory::CopySmallFive((size_t*)buffer32, (size_t*)dest);
+#elif __WIN64__
 					Memory::CopySmallFive((size_t*)buffer32, (size_t*)dest);
 #else
 					Memory::CopySmallFive(buffer32, dest);
@@ -131,6 +142,8 @@ namespace RenderBase
 				while(vertexCount--)
 				{
 #if __OSX__
+					Memory::CopySmallSix((size_t*)buffer32, (size_t*)dest);
+#elif __WIN64__
 					Memory::CopySmallSix((size_t*)buffer32, (size_t*)dest);
 #else
 					Memory::CopySmallSix(buffer32, dest);

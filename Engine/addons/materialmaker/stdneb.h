@@ -26,7 +26,7 @@ THE SOFTWARE.
 #if __WIN32__
 #include "core/win32/precompiled.h"
 #elif __WIN64__
-#include "core/xbox360/precompiled.h"
+#include "core/win32/precompiled.h"
 #elif __WII__
 #include "core/wii/precompiled.h"
 #elif __PS3__

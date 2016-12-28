@@ -254,7 +254,7 @@ static const int JobMaxSliceSize = 0x3FFF;
 #define  __attribute__(x)  /**/
 #endif
 
-
+#define __PROJECTOR_COMMIT__ (1)
 
 
 //------------------------------------------------------------------------------

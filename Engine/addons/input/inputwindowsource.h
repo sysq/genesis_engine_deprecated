@@ -26,7 +26,7 @@ THE SOFTWARE.
 
 #include "core/config.h"
 
-#if __WIN32__
+#if WIN32
 
 #include "input/win32/win32inputwebwindowsource.h"
 namespace Input

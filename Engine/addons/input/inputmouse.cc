@@ -24,15 +24,10 @@ THE SOFTWARE.
 ****************************************************************************/
 #include "input/input_stdneb.h"
 #include "input/inputmouse.h"
-#if __WIN32__
+#if __WIN32__ ||  __WIN64__
 namespace Input
 {
 __ImplementClass(Input::InputMouse, 'MOUS', Win32Input::Win32InputMouse);
-}
-#elif __WIN64__
-namespace Input
-{
-__ImplementClass(Input::InputMouse, 'MOUS', Xbox360::Xbox360Mouse);
 }
 #elif __WII__
 namespace Input

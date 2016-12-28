@@ -27,12 +27,8 @@ THE SOFTWARE.
 
 namespace Input
 {
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 __ImplementClass(Input::InputServer, 'INPS', Win32Input::Win32InputServer);
-__ImplementImageSingleton(Input::InputServer);
-#elif __WIN64__
-// FIXME!
-__ImplementClass(Input::InputServer, 'INPS', Xbox360::Xbox360InputServer);
 __ImplementImageSingleton(Input::InputServer);
 #elif __WII__
 __ImplementClass(Input::InputServer, 'INPS', Wii::WiiInputServer);

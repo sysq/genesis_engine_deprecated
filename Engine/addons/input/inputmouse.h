@@ -25,20 +25,11 @@ THE SOFTWARE.
 #ifndef __inputmouse_H__
 #define __inputmouse_H__
 
-#if __WIN32__
+#if __WIN32__|| __WIN64__
 #include "input/win32/win32inputmouse.h"
 namespace Input
 {
 class InputMouse : public Win32Input::Win32InputMouse
-{
-    __DeclareClass(InputMouse);
-};
-}
-#elif __WIN64__
-#include "input/xbox360/xbox360mouse.h"
-namespace Input
-{
-class InputMouse : public Xbox360::Xbox360Mouse
 {
     __DeclareClass(InputMouse);
 };

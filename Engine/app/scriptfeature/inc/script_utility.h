@@ -102,7 +102,10 @@ namespace App
 
 	#ifdef __WIN32__
 	static const Util::String s_csMonoDllAssign				  = "script:mono-2.0.dll";
-	
+
+	#elif defined(__WIN64__)	
+	static const Util::String s_csMonoDllAssign				  = "script:mono-2.0.dll";
+
 	#elif defined(__ANDROID__)
 	static const Util::String s_csMonoDllAssign				  = "";
 

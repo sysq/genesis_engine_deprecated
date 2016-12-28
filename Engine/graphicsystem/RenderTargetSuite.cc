@@ -309,7 +309,7 @@ namespace Graphic
 				{
 					m_depthTexture->SetShareDepthStencilRT(m_renderToTexture->GetRenderTarget());
 				}
-#if __WIN32__ && RENDERDEVICE_D3D9
+#if (__WIN32__ || __WIN64__) && RENDERDEVICE_D3D9
 				RenderBase::PixelFormat::Code format = RenderBase::PixelFormat::R32F;
 #elif __ANDROID__	|| RENDERDEVICE_OPENGLES
 				RenderBase::PixelFormat::Code format = RenderBase::PixelFormat::A8R8G8B8;

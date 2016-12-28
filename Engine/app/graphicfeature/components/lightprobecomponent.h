@@ -24,6 +24,8 @@ THE SOFTWARE.
 #pragma once
 #ifdef __WIN32__
 #include "rendersystem/d3d9/TextureD3D9.h"
+#elif __WIN64__
+#include "rendersystem/d3d9/TextureD3D9.h"
 #endif
 #include "graphicfeature/components/rendercomponent.h"
 #include "graphicsystem/base/RenderToTexture.h"
@@ -96,7 +98,7 @@ namespace App
 		void SaveRenderResult(const Util::String& path);
 
 		void _UpdateRenderQueue();
-#ifdef __WIN32__
+#ifdef WIN32
 		GPtr<D3D9::TextureD3D9>             m_pExportCubeTex;
 #endif
 

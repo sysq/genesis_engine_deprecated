@@ -255,7 +255,7 @@ namespace Resources
 			return true;
 		}
 
-#if __WIN32__ || __ANDROID__ || __OSX__
+#if __WIN32__ || __ANDROID__ || __OSX__ || __WIN64__
 		// need not swap. so can copy memory 
 
 		t.Resize(count, typename T::value_type() );

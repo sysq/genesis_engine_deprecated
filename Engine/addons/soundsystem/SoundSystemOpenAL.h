@@ -70,7 +70,7 @@ namespace Sound
 }
 
 // For Mp3
-ssize_t ReadMP3MemoryStream(void *handle, void *buf, size_t sz);
+size_t ReadMP3MemoryStream(void *handle, void *buf, size_t sz);
 off_t LseekMP3MemoryStream(void *handle, off_t offset, int whence);
 void CleanupMP3MemoryStream(void *handle);
 

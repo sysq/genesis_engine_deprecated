@@ -9,6 +9,13 @@
 #include<fcntl.h>
 #include<conio.h>
 
+#elif __WIN64__
+#include<Windows.h>
+#include<stdio.h>
+#include<io.h>
+#include<fcntl.h>
+#include<conio.h>
+
 #elif __ANDROID__
 #include "core/android/precompiled.h"
 #endif

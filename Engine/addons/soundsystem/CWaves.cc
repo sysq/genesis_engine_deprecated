@@ -33,7 +33,10 @@
 #include <ks.h>
 #include <mmsystem.h>
 #include <ksmedia.h>
-
+#elif __WIN64__
+#include <ks.h>
+#include <mmsystem.h>
+#include <ksmedia.h>
 #else
 
 typedef long HRESULT;

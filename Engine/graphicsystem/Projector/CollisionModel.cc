@@ -21,8 +21,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-#ifndef __PROJECTOR_COMMIT__
+
 #include "stdneb.h"
+#ifndef __PROJECTOR_COMMIT__
 #include "CollisionModel.h"
 #include "resource/meshres.h"
 #include "rendersystem/base/PrimitiveGroup.h"
@@ -33,7 +34,7 @@ THE SOFTWARE.
 #define ICE_NO_DLL
 #if __ANDROID__
 #include <OPCODEA/Opcode.h>
-#elif __WIN32__
+#elif __WIN32__ || __WIN64__
 #include <OPCODE/Opcode.h>
 #elif __OSX__
 #include "Opcode.h"

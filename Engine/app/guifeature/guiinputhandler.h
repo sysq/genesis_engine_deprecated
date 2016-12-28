@@ -25,7 +25,7 @@ THE SOFTWARE.
 #define __GuiInputHandler_H__
 
 //------------------------------------------------------------------------------
-#if __WIN32__
+#if WIN32
 #include "win32guiinputhandler.h"
 namespace Input
 {

@@ -56,6 +56,14 @@ void* g_hOpenALDLL = 0;
 #define GOutputDebugString(str) printf(str)
 
 void* g_hOpenALDLL = 0;
+#else
+#include "windows.h"
+#define GLoadLibrary(path) LoadLibrary(path)
+#define GGetProcAddress(handle,name) GetProcAddress(handle,name)
+#define GFreeLibrary(handle) FreeLibrary(handle)
+
+#define GOutputDebugString(str) OutputDebugString(str)
+HINSTANCE g_hOpenALDLL = NULL;
 #endif
 
 

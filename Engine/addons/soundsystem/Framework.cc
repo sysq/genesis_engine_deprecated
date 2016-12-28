@@ -231,8 +231,9 @@ ALint ALFWKeyPress(void)
 {
 #ifdef __WIN32__
 	return _kbhit();
-
 #elif __ANDROID__
+	return 0;
+#else
 	return 0;
 #endif
 	

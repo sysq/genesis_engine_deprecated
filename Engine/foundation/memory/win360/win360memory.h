@@ -34,9 +34,7 @@ THE SOFTWARE.
 #include "core/debug.h"
 #include "threading/interlocked.h"
 #include "memory/win360/win360memoryconfig.h"
-#if __WIN32__
-#include "memory/win32/win32memory.h"
-#elif __WIN64__
+#if __WIN32__ || __WIN64__
 #include "memory/win32/win32memory.h"
 #endif
 

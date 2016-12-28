@@ -155,7 +155,7 @@ namespace Resources
 			return true;
 		}
 
-#if __WIN32__ || __ANDROID__ || __OSX__
+#if __WIN32__ || __ANDROID__ || __OSX__  || __WIN64__
 		// need not swap. so can copy memory 
 
 		pWriter->WriteRawData( &t[0], count*sizeof(typename T::value_type) );

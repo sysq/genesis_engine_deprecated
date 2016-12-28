@@ -24,7 +24,7 @@ THE SOFTWARE.
 #ifndef __Win32GuiInputHandler_H__
 #define __Win32GuiInputHandler_H__
 
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 #include "input/inputhandler.h"
 #include "input/inputkey.h"
 

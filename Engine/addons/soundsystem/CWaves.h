@@ -8,7 +8,9 @@
 #ifdef __WIN32__
 #include <windows.h>
 #include <stdio.h>
-
+#elif __WIN64__
+#include <windows.h>
+#include <stdio.h>
 #elif __ANDROID__
 #include "core/android/precompiled.h"
 typedef unsigned short WORD;

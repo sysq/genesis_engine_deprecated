@@ -24,20 +24,11 @@ THE SOFTWARE.
 #ifndef __inputkeyboard_H__
 #define __inputkeyboard_H__
 
-#if __WIN32__
+#if __WIN32__ ||  __WIN64__
 #include "input/base/inputkeyboardbase.h"
 namespace Input
 {
 class InputKeyboard : public Input::InputKeyboardBase
-{
-    __DeclareClass(InputKeyboard);
-};
-}
-#elif __WIN64__
-#include "input/xbox360/xbox360keyboard.h"
-namespace Input
-{
-class InputKeyboard : public Xbox360::Xbox360Keyboard
 {
     __DeclareClass(InputKeyboard);
 };

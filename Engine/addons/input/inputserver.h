@@ -26,7 +26,7 @@ THE SOFTWARE.
 #define __inputserver_H__
 
 #include "core/singleton.h"
-#if __WIN32__
+#if __WIN32__ ||  __WIN64__
 #include "input/win32/win32inputserver.h"
 namespace Input
 {
@@ -44,20 +44,6 @@ public:
 
 private:
 	
-};
-}
-#elif __WIN64__
-#include "input/xbox360/xbox360inputserver.h"
-namespace Input
-{
-class InputServer : public Xbox360::Xbox360InputServer
-{
-    __DeclareClass(InputServer);
-public:
-    /// constructor
-    InputServer();
-    /// destructor
-    virtual ~InputServer();
 };
 }
 #elif __WII__
