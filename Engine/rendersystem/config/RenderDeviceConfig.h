@@ -24,7 +24,7 @@ THE SOFTWARE.
 #ifndef RENDERDEVICECONFIG_H
 #define RENDERDEVICECONFIG_H
 
-#if __WIN32__ || __WIN64__
+#if WIN32
 ////#include <dxerr9.h>
 #	ifndef DXTRACE_ERR
 #		define DXTRACE_ERR(x,y)

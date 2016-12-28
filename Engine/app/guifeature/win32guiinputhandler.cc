@@ -21,8 +21,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-#if __WIN32__
+
 #include "input/input_stdneb.h"
+#if __WIN32__ || __WIN64__
 #include "guiinputhandler.h"
 #include "input/inputserver.h"
 

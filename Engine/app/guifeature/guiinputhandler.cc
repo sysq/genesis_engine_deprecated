@@ -24,7 +24,7 @@ THE SOFTWARE.
 #include "input/input_stdneb.h"
 #include "guiinputhandler.h"
 
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 namespace Input
 {
 	__ImplementClass(Input::GuiInputHandler, 'GWIH', Input::Win32GuiInputHandler);

@@ -60,7 +60,7 @@ THE SOFTWARE.
 #include "soundfeature/components/SoundReverbFilterComponent.h"
 #endif // __USE_AUDIO__ || __GENESIS_EDITOR__
 
-#ifdef __WIN32__
+#ifdef __WIN32__ || __WIN64__
 #include "WinBase.h" // - for LoadLibrary and GetProcAddress
 static HMODULE s_monoDllHandle = NULL;
 #elif defined(__ANDROID__)
@@ -469,11 +469,13 @@ namespace App
 		{
 			return &( SkinnedMeshRenderComponent::RTTI );
 		}
+#ifndef __PROJECTOR_COMMIT__ 
 		else if ( sName=="ProjectorRender" ||
 			sName=="ProjectorRenderComponent")
 		{
 			return &( ProjectorRenderComponent::RTTI);
 		}
+#endif
 		else if ( sName=="Skeleton" ||
                  sName=="SkeletonComponent" )
 		{

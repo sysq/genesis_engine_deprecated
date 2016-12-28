@@ -26,8 +26,17 @@ THE SOFTWARE.
 
 #include "core/config.h"
 
-#if WIN32
+#if __WIN32__
 
+#include "input/win32/win32inputwebwindowsource.h"
+namespace Input
+{
+	class InputWindowSource : public Win32Input::Win32InputWebWindowSource
+	{
+		__DeclareClass(InputWindowSource);
+	};
+}
+#elif __WIN64__
 #include "input/win32/win32inputwebwindowsource.h"
 namespace Input
 {

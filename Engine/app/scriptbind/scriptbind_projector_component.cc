@@ -132,17 +132,23 @@ namespace App
 	static void ICall_ProjectorRenderComponent_EnableProjector( MonoObject* pMonoObj, mono_bool b)
 	{
 		ScriptObjWrapper<ProjectorRenderComponent> self( pMonoObj );
+#ifndef __PROJECTOR_COMMIT__
 		self->EnableProjectorUpdate( c_iMonoBool_True == b );
+#endif
 	}
 
 	static mono_bool ICall_ProjectorRenderComponent_IsEnabledProjector( MonoObject* pMonoObj)
 	{
 		ScriptObjWrapper<ProjectorRenderComponent> self( pMonoObj );
+#ifndef __PROJECTOR_COMMIT__
 		bool b = self->IsProjectorEnabled();
 		if (b)
 			return c_iMonoBool_True;
 		else
 			return c_iMonoBool_False;
+#else
+		return c_iMonoBool_False;
+#endif
 	}
 }
 
