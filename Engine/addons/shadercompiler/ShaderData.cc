@@ -25,7 +25,9 @@ THE SOFTWARE.
 #include "ShaderData.h"
 #include "io/uri.h"
 #include "Compilers/D3DCompiler.h"
+#if RENDERDEVICE_OPENGLES
 #include "Compilers/GLESCompiler.h"
+#endif
 #include "ShaderAnalyzer.h"
 #include "Utility/ShaderCompilerUtil.h"
 #include "ShadercompilerConfig.h"
@@ -69,15 +71,16 @@ void ShaderData::Init()
 			GET_FUNCTION_NAME()
 			);
 	}
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 	m_pCompilerD3D9 = D3DCompiler::Create();
 	m_pCompilerD3D9->InitCompiler();
 	m_pCompilerD3D9->SetShaderName(m_Name);
 #endif
+#if RENDERDEVICE_OPENGLES
 	m_pCompilerGLES = GLESCompiler::Create();
 	m_pCompilerGLES->SetShaderName(m_Name);
 	m_pCompilerGLES->InitCompiler();
-
+#endif
 	
 	m_pAnalyzer = n_new(ShaderAnalyzer);
 

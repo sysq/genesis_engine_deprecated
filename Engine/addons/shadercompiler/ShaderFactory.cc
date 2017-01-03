@@ -29,7 +29,7 @@ THE SOFTWARE.
 
 #include "ShaderData.h"
 #include "Compilers/MojoShaderTool.h"
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 #include "Compilers/CGTool.h"
 #endif
 
@@ -47,7 +47,7 @@ ShaderFactory::ShaderFactory()
 
 	m_pMojoTool = MojoShaderTool::Create();
 
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 	m_pCGTool = CGTool::Create();
 #endif
 	
@@ -57,7 +57,7 @@ ShaderFactory::~ShaderFactory()
 {
 	__DestructImageSingleton;
 
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 	if (m_pCGTool !=NULL)
 	{
 		n_delete(m_pCGTool);

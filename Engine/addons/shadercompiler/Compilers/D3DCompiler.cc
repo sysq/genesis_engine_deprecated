@@ -23,7 +23,7 @@ THE SOFTWARE.
 ****************************************************************************/
 #include "stdneb.h"
 
-#if __WIN32__
+#if __WIN32__ || __WIN64__
 
 #include "D3DCompiler.h"
 #include "shadercompiler/ShaderElement.h"
