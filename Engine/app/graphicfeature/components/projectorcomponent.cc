@@ -29,8 +29,9 @@ THE SOFTWARE.
 #include "graphicfeature/graphicsfeatureprotocol.h"
 #include "graphicfeature/graphicsfeature.h"
 #include "rendersystem/RenderSystem.h"
-#if __ANDROID__
 #define ICE_NO_DLL
+#if __ANDROID__
+
 #include "OPCODEA/Opcode.h"
 #elif __OSX__
 #include "Opcode.h"
