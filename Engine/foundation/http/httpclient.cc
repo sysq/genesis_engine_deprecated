@@ -23,11 +23,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
 
-#if (__WIN32__||__APPLE__)
+
 
 
 #include "stdneb.h"
-
+#if (__WIN32__||__APPLE__)
 // HttpClient is not implemented on the Wii
 #if __NEBULA3_HTTP_FILESYSTEM__
 #include "http/httpclient.h"

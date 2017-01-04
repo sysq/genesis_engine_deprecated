@@ -41,7 +41,9 @@ THE SOFTWARE.
 #include "app/scriptfeature/mono_script_manager.h"
 #include "app/scriptfeature/script_general_manager.h"
 #include "app/scriptfeature/inc/script_instance.h"
+#ifndef __PROJECTOR_COMMIT__
 #include "app/graphicfeature/components/projectorcomponent.h"
+#endif
 #include "soundfeature/components/SoundSourceComponent.h"
 #include "soundfeature/components/SoundListenerComponent.h"
 #include "app/vegetationfeature/components/vegetationrendercomponent.h"

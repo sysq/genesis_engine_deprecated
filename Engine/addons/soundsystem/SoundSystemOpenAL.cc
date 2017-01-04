@@ -491,7 +491,7 @@ namespace Sound
 }
 
 //------------------------------------------------------------------------------
-ssize_t ReadMP3MemoryStream(void *handle, void *buf, size_t sz)
+size_t ReadMP3MemoryStream(void *handle, void *buf, size_t sz)
 {
 	ssize_t ret;
 	IO::MemoryStream *pData = static_cast< IO::MemoryStream* >(handle);

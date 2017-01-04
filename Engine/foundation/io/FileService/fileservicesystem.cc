@@ -21,9 +21,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-#if __WIN32__
+
 
 #include "stdneb.h"
+#if __WIN32__
 #include "io/FileService/fileservicesystem.h"
 #include "io/archfs/archive.h"
 #include "io/assignregistry.h"

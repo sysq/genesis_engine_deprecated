@@ -22,10 +22,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-#ifdef __WIN32__
+
 
 
 #include "stdneb.h"
+#ifdef __WIN32__
 #include "http/httpstream.h"
 #include "http/httpclientregistry.h"
 
