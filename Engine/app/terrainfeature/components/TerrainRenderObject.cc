@@ -164,7 +164,7 @@ namespace App
 			{
 				// lightmap support
 				RenderBase::TextureHandle lightmapHandle = getOwner()->GetLMTextureHandle( 0 );
-
+				pGMP->SetTextureParam(eGShaderTexLightmap, lightmapHandle);
 				int lmMode = (int)getOwner()->GetLightmapMode();
 				if (lmMode > 0)
 				{
