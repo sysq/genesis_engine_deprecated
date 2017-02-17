@@ -457,7 +457,7 @@ namespace App
 		n_assert(m_pShape)
 			if ( m_pShape )
 			{
-				m_Name = Util::String::FromInt((unsigned int)this);
+				m_Name = Util::String::FromInt((uintptr_t)this);
 				m_pShape->userData = this;
 				m_pShape->setContactOffset(0.02f);
 				m_pShape->setRestOffset(-0.01f);

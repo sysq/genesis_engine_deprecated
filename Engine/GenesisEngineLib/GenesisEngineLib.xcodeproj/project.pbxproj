@@ -7320,6 +7320,7 @@
 					__USE_AUDIO__,
 					NDEBUG,
 					__arm__,
+					__PROJECTOR_COMMIT__,
 				);
 				HEADER_SEARCH_PATHS = (
 					../rendersystem,
@@ -7377,6 +7378,7 @@
 					__USE_AUDIO__,
 					NDEBUG,
 					__arm__,
+					__PROJECTOR_COMMIT__,
 				);
 				HEADER_SEARCH_PATHS = (
 					../rendersystem,

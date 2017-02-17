@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EC474BF1E519BB400E41483 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474BE1E519BB400E41483 /* libstdc++.6.0.9.tbd */; };
+		2EC474C21E519BC200E41483 /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474C01E519BC200E41483 /* libstdc++.6.tbd */; };
+		2EC474C31E519BC200E41483 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474C11E519BC200E41483 /* libstdc++.tbd */; };
+		2EC474C71E519BE600E41483 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474C41E519BE500E41483 /* libc++.1.tbd */; };
+		2EC474C81E519BE600E41483 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474C51E519BE500E41483 /* libc++.tbd */; };
+		2EC474C91E519BE600E41483 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474C61E519BE600E41483 /* libc++abi.tbd */; };
+		2EC474CB1E519BF000E41483 /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474CA1E519BF000E41483 /* libc.tbd */; };
+		2EC474CD1E519BF900E41483 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC474CC1E519BF900E41483 /* libz.tbd */; };
 		587F8B4218FB8FB4007563A8 /* OCAndCPlusInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 587F8B3F18FB8FB4007563A8 /* OCAndCPlusInterface.mm */; };
 		587F8B4318FB8FB4007563A8 /* TextViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 587F8B4118FB8FB4007563A8 /* TextViewController.mm */; };
 		F54D9A4418580A9D0007115E /* libGenesisEngineLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F54D9A3318580A840007115E /* libGenesisEngineLib.a */; };
@@ -25,7 +33,6 @@
 		F5C42B1E18B1AE5F00F5144E /* libFreeTypeIos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C42AEC18B1AD2800F5144E /* libFreeTypeIos.a */; };
 		F5C42B1F18B1AE5F00F5144E /* libGLSLOptimizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C42B1618B1AE1000F5144E /* libGLSLOptimizer.a */; };
 		F5C42B2018B1AE5F00F5144E /* libhlsl2glslfork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C42B1C18B1AE2B00F5144E /* libhlsl2glslfork.a */; };
-		F5C42B2118B1AE5F00F5144E /* liblibopcode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C42B1018B1ADFF00F5144E /* liblibopcode.a */; };
 		F5C42B2218B1AE5F00F5144E /* libMojoShader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C42AF218B1AD4600F5144E /* libMojoShader.a */; };
 		F5C42B2318B1AE5F00F5144E /* libMono26Ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C42B0A18B1ADDD00F5144E /* libMono26Ios.a */; };
 		F5C42B2418B1AE5F00F5144E /* libmpg123-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C42B0418B1ADC100F5144E /* libmpg123-ios.a */; };
@@ -38,14 +45,6 @@
 		F5F49C3517E1C17A00361F45 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49C3417E1C17A00361F45 /* OpenGLES.framework */; };
 		F5F49C9917E1C34B00361F45 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49C9817E1C34B00361F45 /* StoreKit.framework */; };
 		F5F49C9B17E1C35300361F45 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49C9A17E1C35300361F45 /* OpenAL.framework */; };
-		F5F49C9D17E1C36300361F45 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49C9C17E1C36300361F45 /* libz.dylib */; };
-		F5F49CA217E1C37100361F45 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49C9E17E1C37100361F45 /* libc++.1.dylib */; };
-		F5F49CA317E1C37100361F45 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49C9F17E1C37100361F45 /* libc++.dylib */; };
-		F5F49CA417E1C37100361F45 /* libc++abi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49CA017E1C37100361F45 /* libc++abi.dylib */; };
-		F5F49CA517E1C37100361F45 /* libc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49CA117E1C37100361F45 /* libc.dylib */; };
-		F5F49CA917E1C37B00361F45 /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49CA617E1C37B00361F45 /* libstdc++.6.0.9.dylib */; };
-		F5F49CAA17E1C37B00361F45 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49CA717E1C37B00361F45 /* libstdc++.6.dylib */; };
-		F5F49CAB17E1C37B00361F45 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F49CA817E1C37B00361F45 /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -119,13 +118,6 @@
 			remoteGlobalIDString = F5828FD91786721E00546DF5;
 			remoteInfo = Mono26Ios;
 		};
-		F5C42B0F18B1ADFF00F5144E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F5C42B0B18B1ADFE00F5144E /* libopcode.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F501550A18239A0B00E275A1;
-			remoteInfo = libopcode;
-		};
 		F5C42B1518B1AE1000F5144E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5C42B1118B1AE1000F5144E /* GLSLOptimizer.xcodeproj */;
@@ -143,6 +135,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EC474BE1E519BB400E41483 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		2EC474C01E519BC200E41483 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		2EC474C11E519BC200E41483 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		2EC474C41E519BE500E41483 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		2EC474C51E519BE500E41483 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		2EC474C61E519BE600E41483 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		2EC474CA1E519BF000E41483 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		2EC474CC1E519BF900E41483 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		587F8B3F18FB8FB4007563A8 /* OCAndCPlusInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCAndCPlusInterface.mm; sourceTree = "<group>"; };
 		587F8B4018FB8FB4007563A8 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		587F8B4118FB8FB4007563A8 /* TextViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TextViewController.mm; sourceTree = "<group>"; };
@@ -170,7 +170,6 @@
 		F5C42AF918B1AD6B00F5144E /* OggIos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OggIos.xcodeproj; path = ../../../genesis_externals/Externals/IosLibs/Vorbisfile/OggIos/OggIos.xcodeproj; sourceTree = "<group>"; };
 		F5C42AFF18B1ADC000F5144E /* mpg123.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mpg123.xcodeproj; path = "../../../genesis_externals/Externals/IosLibs/mpg123-1.15.4/ports/Xcode/mpg123.xcodeproj"; sourceTree = "<group>"; };
 		F5C42B0518B1ADDC00F5144E /* Mono26Ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mono26Ios.xcodeproj; path = "../../../genesis_externals/Externals/IosLibs/mono-2.6.7/Mono26Ios/Mono26Ios.xcodeproj"; sourceTree = "<group>"; };
-		F5C42B0B18B1ADFE00F5144E /* libopcode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libopcode.xcodeproj; path = ../../../genesis_externals/Externals/IosLibs/libopcode/libopcode.xcodeproj; sourceTree = "<group>"; };
 		F5C42B1118B1AE1000F5144E /* GLSLOptimizer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GLSLOptimizer.xcodeproj; path = ../../../genesis_externals/Externals/IosLibs/mesa/GLSLOptimizer/GLSLOptimizer.xcodeproj; sourceTree = "<group>"; };
 		F5C42B1718B1AE2A00F5144E /* hlsl2glslfork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hlsl2glslfork.xcodeproj; path = ../../../genesis_externals/Externals/IosLibs/hlsl2glslfork/hlsl2glslfork/hlsl2glslfork.xcodeproj; sourceTree = "<group>"; };
 		F5F49C2917E1C17900361F45 /* GameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,14 +180,6 @@
 		F5F49C3417E1C17A00361F45 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F5F49C9817E1C34B00361F45 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		F5F49C9A17E1C35300361F45 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
-		F5F49C9C17E1C36300361F45 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		F5F49C9E17E1C37100361F45 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "usr/lib/libc++.1.dylib"; sourceTree = SDKROOT; };
-		F5F49C9F17E1C37100361F45 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		F5F49CA017E1C37100361F45 /* libc++abi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++abi.dylib"; path = "usr/lib/libc++abi.dylib"; sourceTree = SDKROOT; };
-		F5F49CA117E1C37100361F45 /* libc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libc.dylib; path = usr/lib/libc.dylib; sourceTree = SDKROOT; };
-		F5F49CA617E1C37B00361F45 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
-		F5F49CA717E1C37B00361F45 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
-		F5F49CA817E1C37B00361F45 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,25 +187,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC474CD1E519BF900E41483 /* libz.tbd in Frameworks */,
+				2EC474CB1E519BF000E41483 /* libc.tbd in Frameworks */,
+				2EC474C71E519BE600E41483 /* libc++.1.tbd in Frameworks */,
+				2EC474C81E519BE600E41483 /* libc++.tbd in Frameworks */,
+				2EC474C91E519BE600E41483 /* libc++abi.tbd in Frameworks */,
+				2EC474C21E519BC200E41483 /* libstdc++.6.tbd in Frameworks */,
+				2EC474C31E519BC200E41483 /* libstdc++.tbd in Frameworks */,
+				2EC474BF1E519BB400E41483 /* libstdc++.6.0.9.tbd in Frameworks */,
 				F5C42B1D18B1AE5F00F5144E /* libFreeImage.a in Frameworks */,
 				F5C42B1E18B1AE5F00F5144E /* libFreeTypeIos.a in Frameworks */,
 				F5C42B1F18B1AE5F00F5144E /* libGLSLOptimizer.a in Frameworks */,
 				F5C42B2018B1AE5F00F5144E /* libhlsl2glslfork.a in Frameworks */,
-				F5C42B2118B1AE5F00F5144E /* liblibopcode.a in Frameworks */,
 				F5C42B2218B1AE5F00F5144E /* libMojoShader.a in Frameworks */,
 				F5C42B2318B1AE5F00F5144E /* libMono26Ios.a in Frameworks */,
 				F5C42B2418B1AE5F00F5144E /* libmpg123-ios.a in Frameworks */,
 				F5C42B2518B1AE5F00F5144E /* libOggIos.a in Frameworks */,
 				F5C42B2618B1AE5F00F5144E /* libzlibIos.a in Frameworks */,
 				F54D9A4418580A9D0007115E /* libGenesisEngineLib.a in Frameworks */,
-				F5F49CA917E1C37B00361F45 /* libstdc++.6.0.9.dylib in Frameworks */,
-				F5F49CAA17E1C37B00361F45 /* libstdc++.6.dylib in Frameworks */,
-				F5F49CAB17E1C37B00361F45 /* libstdc++.dylib in Frameworks */,
-				F5F49CA217E1C37100361F45 /* libc++.1.dylib in Frameworks */,
-				F5F49CA317E1C37100361F45 /* libc++.dylib in Frameworks */,
-				F5F49CA417E1C37100361F45 /* libc++abi.dylib in Frameworks */,
-				F5F49CA517E1C37100361F45 /* libc.dylib in Frameworks */,
-				F5F49C9D17E1C36300361F45 /* libz.dylib in Frameworks */,
 				F5F49C9B17E1C35300361F45 /* OpenAL.framework in Frameworks */,
 				F5F49C9917E1C34B00361F45 /* StoreKit.framework in Frameworks */,
 				F5F49C2D17E1C17A00361F45 /* UIKit.framework in Frameworks */,
@@ -317,14 +307,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F5C42B0C18B1ADFE00F5144E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F5C42B1018B1ADFF00F5144E /* liblibopcode.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F5C42B1218B1AE1000F5144E /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,9 +344,16 @@
 		F5F49C2B17E1C17900361F45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EC474CC1E519BF900E41483 /* libz.tbd */,
+				2EC474CA1E519BF000E41483 /* libc.tbd */,
+				2EC474C41E519BE500E41483 /* libc++.1.tbd */,
+				2EC474C51E519BE500E41483 /* libc++.tbd */,
+				2EC474C61E519BE600E41483 /* libc++abi.tbd */,
+				2EC474C01E519BC200E41483 /* libstdc++.6.tbd */,
+				2EC474C11E519BC200E41483 /* libstdc++.tbd */,
+				2EC474BE1E519BB400E41483 /* libstdc++.6.0.9.tbd */,
 				F5C42B1718B1AE2A00F5144E /* hlsl2glslfork.xcodeproj */,
 				F5C42B1118B1AE1000F5144E /* GLSLOptimizer.xcodeproj */,
-				F5C42B0B18B1ADFE00F5144E /* libopcode.xcodeproj */,
 				F5C42B0518B1ADDC00F5144E /* Mono26Ios.xcodeproj */,
 				F5C42AFF18B1ADC000F5144E /* mpg123.xcodeproj */,
 				F5C42AF918B1AD6B00F5144E /* OggIos.xcodeproj */,
@@ -373,14 +362,6 @@
 				F5C42AE718B1AD2700F5144E /* FreeTypeIos.xcodeproj */,
 				F5C42AE018B1AC5400F5144E /* FreeImage.xcodeproj */,
 				F54D9A2C18580A810007115E /* GenesisEngineLib.xcodeproj */,
-				F5F49CA617E1C37B00361F45 /* libstdc++.6.0.9.dylib */,
-				F5F49CA717E1C37B00361F45 /* libstdc++.6.dylib */,
-				F5F49CA817E1C37B00361F45 /* libstdc++.dylib */,
-				F5F49C9E17E1C37100361F45 /* libc++.1.dylib */,
-				F5F49C9F17E1C37100361F45 /* libc++.dylib */,
-				F5F49CA017E1C37100361F45 /* libc++abi.dylib */,
-				F5F49CA117E1C37100361F45 /* libc.dylib */,
-				F5F49C9C17E1C36300361F45 /* libz.dylib */,
 				F5F49C9A17E1C35300361F45 /* OpenAL.framework */,
 				F5F49C9817E1C34B00361F45 /* StoreKit.framework */,
 				F5F49C2C17E1C17900361F45 /* UIKit.framework */,
@@ -462,10 +443,6 @@
 				{
 					ProductGroup = F5C42B1818B1AE2A00F5144E /* Products */;
 					ProjectRef = F5C42B1718B1AE2A00F5144E /* hlsl2glslfork.xcodeproj */;
-				},
-				{
-					ProductGroup = F5C42B0C18B1ADFE00F5144E /* Products */;
-					ProjectRef = F5C42B0B18B1ADFE00F5144E /* libopcode.xcodeproj */;
 				},
 				{
 					ProductGroup = F5C42AEE18B1AD4500F5144E /* Products */;
@@ -550,13 +527,6 @@
 			fileType = archive.ar;
 			path = libMono26Ios.a;
 			remoteRef = F5C42B0918B1ADDD00F5144E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F5C42B1018B1ADFF00F5144E /* liblibopcode.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = liblibopcode.a;
-			remoteRef = F5C42B0F18B1ADFF00F5144E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		F5C42B1618B1AE1000F5144E /* libGLSLOptimizer.a */ = {

@@ -80,7 +80,7 @@ namespace Graphic
 			
 			if ( NULL != lc->GetRenderTargetSuite() || rc->GetRenderTargetSuite() != NULL )
 			{
-				return (uint)lc->GetRenderTargetSuite() < (uint)rc->GetRenderTargetSuite();
+				return (uintptr_t)lc->GetRenderTargetSuite() < (uintptr_t)rc->GetRenderTargetSuite();
 			}
 
 			ViewPortWindow* lhvp = (NULL == lhs->GetTargetWindow()) ? default_window : lhs->GetTargetWindow();
